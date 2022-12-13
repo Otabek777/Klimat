@@ -1788,6 +1788,15 @@
     <script src="slick-1.8.1/slick/slick.min.js"></script>
     <script src="js/main.js"></script>
     <script>
+        if (window.innerWidth < 768) {
+            $('.articles__box').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: false,
+            });
+        }
     </script>
 </body>
 </html>
