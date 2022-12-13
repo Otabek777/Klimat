@@ -1,3 +1,10 @@
+$(window).scroll(function(){
+    if ( $(this).scrollTop() > 50) {
+        $('.header').addClass("fixed");
+    } else {
+        $('.header').removeClass("fixed");
+    }
+});
 if(document.querySelector('.input_phone')) {
     window.addEventListener("DOMContentLoaded", function() {
         [].forEach.call( document.querySelectorAll('.tel'), function(input) {
