@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
     <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" href="css/style.css">
@@ -763,6 +764,22 @@
                         <div class="catalog__filter">
                             <div class="block">
                                 <p class="h5">Цена, ₽</p>
+                                <div class="wrap">
+                                    <div class="price_num">
+                                        <p>
+                                            От
+                                            <input type="text" id="amount" readonly>
+                                        </p>
+                                        <p>
+                                            До
+                                            <input type="text" id="amount2" readonly>
+                                        </p>
+                                    </div>
+                                    <div class="slider-range">
+                                        <div id="slider-range"></div>
+                                    </div>
+                                    
+                                </div>
                             </div>
                             <div class="select block">
                                 <p class="h5">Производитель</p>
@@ -1633,6 +1650,7 @@
     </footer>
     
     <script src="js/jquery.min.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
     <script src="slick-1.8.1/slick/slick.min.js"></script>
     <script src="js/main.js"></script>
     <script>
@@ -1644,7 +1662,21 @@
                 arrows: false,
                 dots: false,
             });
-        }
+        };
+        $( function() {
+          $( "#slider-range" ).slider({
+            range: true,
+            min: 0,
+            max: 500000,
+            values: [ 0, 400000 ],
+            slide: function( event, ui ) {
+              $( "#amount" ).val(ui.values[ 0 ]);
+              $( "#amount2" ).val(ui.values[ 1 ] );
+            }
+          });
+          $( "#amount" ).val($( "#slider-range" ).slider( "values", 0 ));
+          $( "#amount2" ).val($( "#slider-range" ).slider( "values", 1 ) );
+        });
     </script>
 </body>
 </html>

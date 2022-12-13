@@ -2722,6 +2722,54 @@ ul, ol {
   display: none;
 }
 
+.catalog__filter .price_num {
+  margin-bottom: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.catalog__filter .price_num input {
+  width: 100%;
+  border: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 189.3%;
+  color: #8C9AA6;
+  margin-left: 2px;
+}
+.catalog__filter .price_num p {
+  max-width: 84px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 189.3%;
+  color: #8C9AA6;
+}
+.catalog__filter .slider-range {
+  max-width: calc(100% - 20px);
+  margin-left: 10px;
+}
+.catalog__filter .ui-widget.ui-widget-content {
+  border: 0;
+  height: 1px;
+  background: #E8EBEE;
+}
+.catalog__filter .ui-slider-horizontal .ui-slider-range {
+  background: #FF6600;
+}
+.catalog__filter .ui-state-default, .catalog__filter .ui-widget-content .ui-state-default, .catalog__filter .ui-widget-header .ui-state-default, .catalog__filter .ui-button, .catalog__filter html .ui-button.ui-state-disabled:hover, .catalog__filter html .ui-button.ui-state-disabled:active {
+  width: 11px;
+  height: 11px;
+  background: #FF6600;
+  border: 0;
+  border-radius: 50%;
+}
+
 @media screen and (max-width: 768px) {
   .header__catalog {
     position: fixed;
