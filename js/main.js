@@ -5,6 +5,20 @@ $(window).scroll(function(){
         $('.header').removeClass("fixed");
     }
 });
+if(document.querySelector(".btn_consultation")) {
+    $(".btn_consultation").click(function() {
+        $(".modal").addClass("active");
+        setTimeout(function() {
+            $(".modal").addClass("opacity");
+        }, 1);
+    });
+    $(".modal .close").click(function() {
+        $(".modal").removeClass("opacity");
+        setTimeout(function() {
+            $(".modal").removeClass("active");
+        }, 500);
+    });
+};
 if(document.querySelector('.input_phone')) {
     window.addEventListener("DOMContentLoaded", function() {
         [].forEach.call( document.querySelectorAll('.tel'), function(input) {
