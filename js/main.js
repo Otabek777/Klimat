@@ -77,6 +77,59 @@ $(".header__catalog_btn").click(function() {
         $(".search_wrap").removeClass("active");
     },500);
 });
+if(document.querySelector(".catalog_filter_btn")) {
+    $(".catalog_filter_btn .btn").click(function() {
+        $(".main_page__aside").addClass("open");
+    });
+    $(".main_page__aside .close").click(function() {
+        $(".main_page__aside").removeClass("open");
+    });
+};
+
+// Mobile Menu
+$(".menu_mobile_bottom .item_burgir").click(function() {
+    if($(".menu_mobile_bottom .item_burgir").hasClass("active")) {
+        $(".menu_mobile").removeClass("open");
+    } else {
+        $(".menu_mobile").addClass("open");
+    };
+});
+$(".menu_mobile_bottom .item_catalog").click(function() {
+    if($(".menu_mobile_bottom .item_catalog").hasClass("active")) {
+        $(".header__catalog").removeClass("open");
+    } else {
+        $(".header__catalog").addClass("open");
+    };
+});
+$(".menu_mobile_bottom .item").click(function() {
+    var thisItem = $(this);
+    
+    if(thisItem.hasClass("active")) {
+        thisItem.removeClass("rotate");
+        setTimeout(function() {
+            thisItem.removeClass("active");
+        }, 300);
+    } else {
+        thisItem.addClass("active");
+        setTimeout(function() {
+            thisItem.addClass("rotate");
+        }, 300);
+    };
+});
+$(".menu_mobile_bottom .item_burgir").click(function() {
+    $(".header__catalog").removeClass("open");
+    $(".menu_mobile_bottom .item_catalog").removeClass("rotate");
+    setTimeout(function() {
+        $(".menu_mobile_bottom .item_catalog").removeClass("active");
+    }, 300);
+});
+$(".menu_mobile_bottom .item_catalog").click(function() {
+    $(".menu_mobile").removeClass("open");
+    $(".menu_mobile_bottom .item_burgir").removeClass("rotate");
+    setTimeout(function() {
+        $(".menu_mobile_bottom .item_burgir").removeClass("active");
+    }, 300);
+});
 
 if(document.querySelector(".tab_btn")) {
     // Tab
