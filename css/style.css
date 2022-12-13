@@ -571,7 +571,8 @@ ul, ol {
   height: 70px;
 }
 .header.fixed .header__bottom {
-  height: 60px;
+  height: 61px;
+  border-bottom: 1px solid #FFFFFF;
 }
 
 .title_h2 {
@@ -2798,6 +2799,7 @@ ul, ol {
   }
   .header.fixed .header__bottom {
     height: 0;
+    border: 0;
   }
   .header_wrap {
     height: 73px;
