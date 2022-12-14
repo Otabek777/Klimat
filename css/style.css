@@ -961,6 +961,10 @@ ul, ol {
   margin-right: 0;
 }
 
+.request_form_border_mobile {
+  display: none;
+}
+
 .request_form {
   padding: 65px 0 80px 0;
   background: #1862A3 url(../img/request_form-border.png) no-repeat top right;
@@ -3556,6 +3560,19 @@ ul, ol {
   .advantage__block .title {
     font-size: 16px;
     line-height: 125%;
+  }
+  .request_form_border_mobile {
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+  }
+  .request_form_border_mobile img {
+    width: 100%;
+  }
+  .request_form .phone {
+    z-index: 1;
   }
   .request_form {
     display: block;
